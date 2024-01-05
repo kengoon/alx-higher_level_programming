@@ -6,7 +6,7 @@ if __name__ == "__main__":
     if not arg_len:
         print("0 arguments.")
     else:
-        print("{:d} arguments:".format(arg_len))
+        print("{} arguments:".format(arg_len))
         for i, arg in enumerate(argv):
             if i:
-                print("{:d}: {arg}".format(i)
+                print("{}: {}".format(i, arg))
