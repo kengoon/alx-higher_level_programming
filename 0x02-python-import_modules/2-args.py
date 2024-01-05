@@ -5,8 +5,10 @@ if __name__ == "__main__":
     arg_len = len(argv) - 1
     if not arg_len:
         print("0 arguments.")
+    elif arg_len == 1:
+        print("1 argument:")
     else:
         print("{} arguments:".format(arg_len))
-        for i, arg in enumerate(argv):
-            if i:
-                print("{}: {}".format(i, arg))
+    for i, arg in enumerate(argv):
+        if i:
+            print("{}: {}".format(i, arg))
