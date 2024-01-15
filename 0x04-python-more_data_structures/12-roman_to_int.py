@@ -15,7 +15,7 @@ def roman_to_int(roman_string):
     num = 0
 
     for i, s in enumerate(roman_string):
-        if not roman_dict.get(s) or roman_string.count(s) > 3:
+        if not roman_dict.get(s):
             return 0
 
         if (i < len(roman_string) - 1 and
