@@ -1,17 +1,10 @@
 #!/usr/bin/python3
-'''A module containing IO functions.
-'''
+'''A module containing IO functions.'''
 
 
 def write_file(filename="", text=""):
-    '''Writes a UTF-8 encoded text to a file.
-    Args:
-        filename (str): The name of the file to write to.
-        text (str): The content to store in the file.
-    Returns:
-        int: The number of characters written.
-    '''
+    '''Writes a UTF-8 encoded text to a file'''
     n = 0
-    with open(filename, mode='w', encoding='utf-8') as file:
-        n = file.write(text)
+    with open(filename, mode='w', encoding='utf-8') as f:
+        n = f.write(text)
     return n
