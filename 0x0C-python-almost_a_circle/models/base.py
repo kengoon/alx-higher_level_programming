@@ -20,7 +20,7 @@ class Base:
         Args:
             id (int): The identity of the new Base.
         """
-        if id is not None:
+        if id:
             self.id = id
         else:
             Base.__nb_objects += 1
@@ -32,8 +32,7 @@ class Base:
         Args:
             list_dictionaries (list): A list of dictionaries.
         """
-        if list_dictionaries is None or list_dictionaries == []:
-            return "[]"
+        
         return json.dumps(list_dictionaries)
 
     @classmethod
@@ -59,7 +58,7 @@ class Base:
             If json_string is None or empty - an empty list.
             Otherwise - the Python list represented by json_string.
         """
-        if json_string is None or json_string == "[]":
+        if json_string is None:
             return []
         return json.loads(json_string)
 
@@ -69,7 +68,7 @@ class Base:
         Args:
             **dictionary (dict): Key/value pairs of attributes to initialize.
         """
-        if dictionary and dictionary != {}:
+        if dictionary:
             if cls.__name__ == "Rectangle":
                 new = cls(1, 1)
             else:
@@ -120,7 +119,7 @@ class Base:
             If the file does not exist - an empty list.
             Otherwise - a list of instantiated classes.
         """
-        filename = cls.__name__ + ".csv"
+        filename =f"{cls.__name__}.csv"
         try:
             with open(filename, "r", newline="") as csvfile:
                 if cls.__name__ == "Rectangle":
