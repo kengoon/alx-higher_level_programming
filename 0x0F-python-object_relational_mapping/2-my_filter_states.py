@@ -17,3 +17,7 @@ def main(user, password, db_name, state_name):
 
     for row in cur.fetchall():
         print(row)
+
+
+if __name__ == "__main__":
+    main(*argv[1:])
