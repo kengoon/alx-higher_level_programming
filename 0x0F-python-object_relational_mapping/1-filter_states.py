@@ -34,5 +34,4 @@ def main(username, password, database):
 
 
 if __name__ == "__main__":
-    argv = argv[1:]
-    main(*argv)
+    main(argv[1], argv[2], argv[3])
