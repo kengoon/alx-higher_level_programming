@@ -1,4 +1,4 @@
-#!/bin/usr/python3
+#!/usr/bin/python3
 """
 MySQL script that lists all states from the database hbtn_0d_usa.
 """
