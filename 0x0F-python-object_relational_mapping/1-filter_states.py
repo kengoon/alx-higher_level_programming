@@ -25,7 +25,7 @@ def main(username, password, database):
     )
     cur = conn.cursor()
     cur.execute(
-        "SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY name ASC;"
+        "SELECT id, name FROM states WHERE name LIKE 'N%' ORDER BY id ASC;"
     )
     rows = cur.fetchall()
     for id_, name in rows:
