@@ -2,8 +2,9 @@
 """
 MySQL script that lists all states from the database hbtn_0d_usa.
 """
-from MySQLdb import connect
 from sys import argv
+
+from MySQLdb import connect
 
 
 def main(username, password, database):
