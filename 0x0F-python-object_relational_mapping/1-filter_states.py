@@ -3,12 +3,12 @@
 MySQL script that lists all states that starts with
 the letter N in the table states
 """
-from sys import argv
+import sys
 
 from MySQLdb import connect
 
 
-def main(username, password, database):
+def main():
     """
     Main function.
     :param username:
@@ -18,9 +18,9 @@ def main(username, password, database):
     """
     conn = connect(
         host="localhost",
-        user=username,
-        passwd=password,
-        db=database,
+        user=sys.argv[1],
+        passwd=sys.argv[2],
+        db=sys.argv[3],
         port=3306
     )
     cur = conn.cursor()
