@@ -25,7 +25,7 @@ def main(username, password, database):
     )
     cur = conn.cursor()
     cur.execute(
-        "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id;"
+        "SELECT * FROM states WHERE name LIKE BINARY 'N%' ORDER BY states.id ASC;"
     )
     rows = cur.fetchall()
     for row in rows:
