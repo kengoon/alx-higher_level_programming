@@ -20,7 +20,7 @@ if __name__ == '__main__':
     )
 
     cursor = conn_db.cursor()
-    query_l = "SELECT * FROM states WHERE name LIKE 'N%'"
+    query_l = "SELECT * FROM states WHERE name LIKE BINARY 'N%'"
     cursor.execute(query_l)
 
     rows = cursor.fetchall()
