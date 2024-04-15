@@ -3,10 +3,11 @@
 MySQL script that lists all states that starts with
 the letter N in the table states
 """
-import sys
-import MySQLdb
 
 if __name__ == "__main__":
+    import sys
+    import MySQLdb
+
     db = MySQLdb.connect(
         host="localhost",
         port=3306,
@@ -16,7 +17,7 @@ if __name__ == "__main__":
     )
     cur = db.cursor()
     cur.execute(
-        """SELECT * FROM states WHERE name \
+        """SELECT * FROM states WHERE name
         LIKE BINARY 'N%' ORDER BY states.id ASC;"""
     )
     rows = cur.fetchall()
