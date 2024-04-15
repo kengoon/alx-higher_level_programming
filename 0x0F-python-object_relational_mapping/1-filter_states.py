@@ -34,7 +34,4 @@ def main(username, password, database):
 
 if __name__ == "__main__":
     argv = argv[1:]
-    if len(argv) != 3:
-        print(f"Usage: {argv[0]} username password database")
-        exit(1)
     main(*argv)
