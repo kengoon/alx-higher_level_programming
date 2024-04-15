@@ -25,12 +25,11 @@ def main(username, password, database):
     )
     cur = conn.cursor()
     cur.execute(
-        "SELECT states.id, states.name "
-        "FROM states WHERE states.name LIKE 'N%' ORDER BY id ASC;"
+        "SELECT * FROM states WHERE name LIKE 'N%' ORDER BY id;"
     )
     rows = cur.fetchall()
-    for id_, name in rows:
-        print(f"({id_}, '{name}')")
+    for row in rows:
+        print(f"{row}")
 
 
 if __name__ == "__main__":
